@@ -4,10 +4,15 @@ const input = require('readline-sync');
 
 // TODO 1.1a: Define candidateName // 
 let candidateName;
+console.log (candidateName);
+
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
 let question;
+question = "Who was the first American woman in space?";
 let correctAnswer;
+correctAnswer = "Sally Ride";
 let candidateAnswer;
+candidateAnswer = "";
 
 
 //TODO: Variables for Part 2
@@ -18,11 +23,12 @@ let candidateAnswers;
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-
+  candidateName = input.question("Enter your name: ");
 }
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
+  candidateAnswer = input.question("Who was the first American woman in space?: ");
 
 
 }
@@ -31,7 +37,9 @@ function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 
-
+if correctAnswer == "correct answer";{
+  else console.log "incorrect answer"
+}
 
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
 
@@ -42,7 +50,7 @@ function gradeQuiz(candidateAnswers) {
 function runProgram() {
   askForName();
   // TODO 1.1c: Greet candidate using their name //
-   console.log();
+   console.log( "Hello " + candidateName +"!" );
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
