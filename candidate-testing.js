@@ -3,16 +3,16 @@ const input = require('readline-sync');
 // TODO 2: modify your quiz app to ask 5 questions //
 
 // TODO 1.1a: Define candidateName // 
-let candidateName;
-console.log (candidateName);
+let candidateName = " ";
 
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
-let question;
-question = "Who was the first American woman in space?";
-let correctAnswer;
-correctAnswer = "Sally Ride";
-let candidateAnswer;
-candidateAnswer = "";
+
+let question = ["Who was the first American woman in space? ", 
+"True of false: 5kilometer == 5000 meters", "(5 + 3)/2 *10 = ? ", 
+"Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2?", 
+"What is the minimun crew size for the ISS? "];
+let correctAnswer = ["Sally Ride", "true", "40", "Trajectory", "3"];
+let candidateAnswer = " ";
 
 
 //TODO: Variables for Part 2
@@ -28,18 +28,24 @@ function askForName() {
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-  candidateAnswer = input.question("Who was the first American woman in space?: ");
-
+    for (let i = 0; i < question; i++) {
+      let question = [];
+      question.push(i);
+      
+    }
 
 }
 
-function gradeQuiz(candidateAnswers) {
+function gradeQuiz() {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 
-if correctAnswer == "correct answer";{
-  else console.log "incorrect answer"
-}
+if (candidateAnswer === correctAnswer) {
+  console.log("You are correct!");  
+  } else {
+      console.log("You are wrong!");
+  }
+
 
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
 
@@ -50,7 +56,7 @@ if correctAnswer == "correct answer";{
 function runProgram() {
   askForName();
   // TODO 1.1c: Greet candidate using their name //
-   console.log( "Hello " + candidateName +"!" );
+   console.log( "Hello " + candidateName + "!" );
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
